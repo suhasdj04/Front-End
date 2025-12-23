@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>Employee Details</title>
+    </head>
+    <style>
+        div{
+           border: 1px solid black;
+           width: 400px;
+           margin-left: 500px;
+           padding-bottom: 10px;
+           background-color: bisque;
+           border-radius: 10%;
+           box-shadow: 5px 5px 15px black;
+
+        }
+        h1{
+            text-align: center;
+        }
+
+        form{
+            margin-left: 70px;
+
+        }
+        input:hover{
+            background-color: rgb(6, 157, 102);
+            text-align: center;
+        }
+        input,label{
+            margin-bottom: 10px;
+        }
+        .i1{
+            margin-left: 65px;
+        }
+        .i2{
+            margin-left:40px;
+        }
+        .i4{
+            margin-left:15px;
+        }
+        .i5{
+            margin-left: 35px;
+        }
+        .i6{
+            margin-left: 60px;
+        }
+        .i7{
+            margin-left: 40px;
+        }
+        .i8{
+            margin-left: 20px;
+        }
+        .i9{
+            margin-left: 15px;
+            width:170px;
+        }
+        .i10{
+            margin-left: 40px;
+        }
+        .i9,.i10{
+            margin-top: 10px;
+
+        }
+        .i11{
+            margin-left:20px;
+
+        }
+        button{
+            margin-left:170px;
+            width:100px;
+            background-color:red;
+            color: aliceblue;
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px black;
+
+        }
+        button:hover{
+            background-color: darkred;
+        }
+        a{
+            text-decoration: none;
+        }
+        </style>
+    <body>
+        <div>
+        <h1><u> Employee Details</u></h1>
+        <form>
+        <label>Emp_id:</label>
+        <input class="i1" type="number" placeholder="Enter your EMP ID"><br><br>
+        <label>Emp_Name:</label>
+        <input class="i2" type="text"  placeholder="Enter your EMP Name"><br><br>
+        <label>Emp_Designation:</label>
+        <input class="i3" type="text"  placeholder="Enter your EMP Designation"><br><br>
+        <label>Emp_Company:</label>
+        <input class="i4" type="text"  placeholder="Enter your EMP Company"><br><br>
+        <label>Emp_Salary:</label>
+        <input class="i5"  type="number" placeholder="Enter your EMP Salary"><br><br>
+        <label>Emp_Ph:</label>
+        <input class="i6" type="number" placeholder="Enter your EMP Phn"><br><br>
+        <label>Emp_DOB:</label>
+        <input class="i7" type="date"><br><br>
+        <label>Emp_Address:</label>
+        <input class="i8" type="text" placeholder="Enter your EMP Address"><br><br>
+        <label>Emp_Feedback:</label>
+        <textarea class="i9" placeholder="Enter your EMP Feedback"></textarea>
+        <label>Emp_Email:</label>
+        <input class="i10" type="text" placeholder="Enter your EMP Email"><br><br>
+        <label >Emp_password:</label>
+        <input class="i11" type="password" placeholder="Enter your EMP Password"><br>
+        </form>
+        <button onClick="ButtonClick()"><a href="https://www.alliance.edu.in/submit">submit</a></button>
+        </div>
+        <script>
+            function ButtonClick(){
+                alert("submit successfully");
+            }
+        </script>
+        
+    </body>
+</html>

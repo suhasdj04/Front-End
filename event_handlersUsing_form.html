@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Event Handlers Using Form</title>
+    </head>
+    <body>
+        <h1>Event handlers using forms in java script</h1>
+        <form id="my form">
+            <label for="user">Name:</label>
+            <input type="Text" id="user" placeholder="Enter Your Name">
+            <button type="Submit">Send</button>
+
+      </form>    
+        <p id="para">Waiting for Result</p>  
+        <script>
+            const myform = document.getElementById('my form');
+            const para = document.getElementById('para');
+            const user = document.getElementById('user');
+            function Form(event){
+                event.preventDefault();
+                const data=user.value;
+                para.textContent = "Completed !!"+data;
+                user.value = " ";
+            }
+            myform.addEventListener('submit', Form);
+        </script>
+    </body>
+</html>

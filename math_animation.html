@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Animations - Shapes</title>
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: rgb(25, 3, 70);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            justify-items: center;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        .shape {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        /* Circle */
+        .circle {
+            background: red;
+            border-radius: 50%;
+        }
+        .circle:hover {
+            animation: circleMove 2s infinite ease-in-out;
+        }
+        @keyframes circleMove {
+            0% { transform: translateX(0); background: red; }
+            50% { transform: translateX(80px); background: hotpink; }
+            100% { transform: translateX(0); background: green; }
+        }
+
+        /* Square */
+        .square {
+            background: blue;
+        }
+        .square:hover {
+            animation: squareRotate 3s infinite linear;
+        }
+        @keyframes squareRotate {
+            0% { transform: rotate(0deg); background: blue; }
+            50% { transform: rotate(180deg); background: orange; }
+            100% { transform: rotate(360deg); background: blue; }
+        }
+
+        /* Rectangle */
+        .rectangle {
+            width: 140px;
+            height: 80px;
+            background: purple;
+        }
+        .rectangle:hover {
+            animation: rectangleScale 2s infinite alternate;
+        }
+        @keyframes rectangleScale {
+            0% { transform: scale(1); background: purple; }
+            100% { transform: scale(1.3); background: pink; }
+        }
+
+        /* Triangle */
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid teal;
+        }
+        .triangle:hover {
+            animation: triangleBounce 2s infinite ease-in-out;
+        }
+        @keyframes triangleBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-40px); }
+        }
+
+        /* Oval */
+        .oval {
+            width: 150px;
+            height: 80px;
+            background: crimson;
+            border-radius: 50%;
+        }
+        .oval:hover {
+            animation: ovalPulse 2s infinite ease-in-out;
+        }
+        @keyframes ovalPulse {
+            0% { transform: scaleX(1); background: crimson; }
+            50% { transform: scaleX(1.4); background: gold; }
+            100% { transform: scaleX(1); background: crimson; }
+        }
+
+        /* Star */
+        .star {
+            position: relative;
+            display: block;
+            color: gold;
+            width: 0px;
+            height: 0px;
+            border-right:  100px solid transparent;
+            border-bottom: 70px  solid gold;
+            border-left:   100px solid transparent;
+            transform: rotate(35deg);
+        }
+        .star:before {
+            border-bottom: 80px solid gold;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -45px;
+            left: -65px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+        }
+        .star:after {
+            position: absolute;
+            display: block;
+            color: gold;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid gold;
+            border-left: 100px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
+        }
+        .star:hover {
+            animation: starSpin 3s infinite linear;
+        }
+        @keyframes starSpin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.2); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animations for Different Shapes</h1>
+    <div class="container">
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="shape rectangle"></div>
+        <div class="shape triangle"></div>
+        <div class="shape oval"></div>
+        <div class="shape star"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Scopes in JS</title>
+    </head>
+    <body>
+        <h1>Scopes in JS</h1>
+    <script>
+        //local variables
+        function Scope(){
+        var a=10;
+        var b=20;
+         document.writeln(a+b);
+        };
+        Scope();
+        //global variable
+        var m=12;
+        var n=15;
+        function Sum(){
+             document.writeln(m+n);
+        }
+            Sum();
+
+        // let a=prompt("enter a value :");
+        let b=Number(prompt("enter  b value :"));
+        let c=Number( prompt("enter c value :"));
+        document.writeln(`sum of ${b} and ${c} is :`,b+c,"<br>" );
+        document.writeln("my name is:",a);
+    </script>
+    </body>
+
+
+    
+</html>

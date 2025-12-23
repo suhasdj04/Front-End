@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Event Handlers in JavaScript</title>
+    </head>
+    <body>
+        <h1>Event Handlers in JavaScript</h1>
+        
+        <button id="btn">Click Me</button>
+        <p id="para">Waiting for Clicking the Button</p>
+        
+        <script>
+            const btn = document.getElementById('btn');
+            const para = document.getElementById('para');
+            function Text(){
+                btn.textContent = "You Clicked Me";
+                para.textContent = "Thank You for Clicking the Button";
+            }
+            btn.addEventListener('click', Text);
+
+            
+        </script>
+    </body>
+</html>

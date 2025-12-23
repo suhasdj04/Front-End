@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Functions in JS</title>
+    </head>
+    <body>
+        <h1>functions in JS</h1>
+        <script>
+            //normal functions
+            function Hello(){
+                document.write("Im normal function")
+
+            };
+            Hello();
+
+            //parameterized functions in JS
+            function Sum(a,b){
+                return a+b;
+        };
+        document.writeln(Sum(10,100));
+
+        //Arrow functions in JS
+        let Add=()=>{document.writeln("im arraow")};
+        Add();
+        document.writeln(Add());
+
+        //with parameterized function
+        let Addition=(n1,n2)=>{return n1+n2};
+        Addition();
+        document.writeln(Addition(1000,2000));
+
+        </script>
+    </body>
+</html>
